@@ -7,7 +7,7 @@ import confetti from "canvas-confetti"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { riddleData, type RiddleItem } from "../lib/game-data"
-import { Shuffle, Trophy, FrownIcon } from "lucide-react"
+import { Shuffle, Trophy, FrownIcon, Smile } from "lucide-react"
 
 
 export default function FoodRiddleGame() {
@@ -80,7 +80,7 @@ export default function FoodRiddleGame() {
     <div className="min-h-screen bg-gradient-to-b from-yellow-200 to-green-200 flex flex-col items-center justify-center p-4">
       <Card className="w-full max-w-2xl p-6 space-y-6 bg-white shadow-lg rounded-2xl">
         <h1 className="text-4xl font-bold text-center mb-6 text-purple-600">Food Riddle Game</h1>
-        <div className="text-2xl font-semibold text-center mb-4 text-blue-600">Score: {score}</div>
+        {/* <div className="text-2xl font-semibold text-center mb-4 text-blue-600">Score: {score}</div> */}
         {gameOver ? (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center space-y-4">
             {score >= 5 ? (
@@ -91,10 +91,10 @@ export default function FoodRiddleGame() {
               </>
             ) : (
               <>
-                <h2 className="text-3xl font-bold text-red-600">You lose the game</h2>
-                <FrownIcon className="mx-auto h-24 w-24 text-red-400" />
+                <h2 className="text-3xl font-bold text-green-600"> "Great effort! Give it another try!"</h2>
+                <Smile className="mx-auto h-24 w-24 text-red-400" />
                 <p className="text-2xl text-purple-600">Your score: {score}</p>
-                <p className="text-xl text-blue-600">Keep trying, you will do better next time!</p>
+                <p className="text-2xl font-semibold text-blue-600">"You&apos;re learning! Try again!"</p>
               </>
             )}
             <Button onClick={resetGame} className="mt-4 bg-blue-500 hover:bg-blue-600 text-white">
