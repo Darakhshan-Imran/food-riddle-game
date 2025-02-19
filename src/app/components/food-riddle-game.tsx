@@ -94,7 +94,7 @@ export default function FoodRiddleGame() {
                 <h2 className="text-3xl font-bold text-red-600">You lose the game</h2>
                 <FrownIcon className="mx-auto h-24 w-24 text-red-400" />
                 <p className="text-2xl text-purple-600">Your score: {score}</p>
-                <p className="text-xl text-blue-600">Keep trying, you'll do better next time!</p>
+                <p className="text-xl text-blue-600">Keep trying, you will do better next time!</p>
               </>
             )}
             <Button onClick={resetGame} className="mt-4 bg-blue-500 hover:bg-blue-600 text-white">
